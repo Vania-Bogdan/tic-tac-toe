@@ -33,16 +33,16 @@ body{
 
 @media (max-width:480px) {
     .field{
-        width: 246px;
-        height: 246px;
+        width: 276px;
+        height: 276px;
         grid-gap: 3px;
-        border-radius: 5px;
-        margin-top: 50px;
+        border-radius: 0;
+        margin-top: 150px;
     }
     .item{
-        width: 80px;
-        height: 80px;
-        border-radius: 5px;
+        width: 90px;
+        height: 90px;
+        border-radius: 0;
     }
 }
 
