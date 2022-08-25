@@ -22,13 +22,28 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Tahoma, sans-serif;
     font-size: 60px;
     font-weight: bold;
     color: #fff;
     width: 160px;
     height: 160px;
     border-radius: 10px;
+}
+
+@media (max-width:480px) {
+    .field{
+        width: 246px;
+        height: 246px;
+        grid-gap: 3px;
+        border-radius: 5px;
+        margin-top: 50px;
+    }
+    .item{
+        width: 80px;
+        height: 80px;
+        border-radius: 5px;
+    }
 }
 
 .wrapper{
