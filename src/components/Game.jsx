@@ -47,21 +47,19 @@ class Game extends React.Component {
                 if (this.state.squares[line[0]] === symbol &&
                 this.state.squares[line[1]] === symbol &&
                 this.state.squares[line[2]] === symbol) {
-                        this.setState({
-                            squares: Array(9).fill(null),
-                            count: 0,
-                            win: true,
-                            winner: symbol + " WIN"
-                        })
+                    this.setState({
+                        squares: Array(9).fill(null),
+                        count: 0,
+                        win: true,
+                        winner: symbol + " WIN"
+                    })
                 } else {
-                    setTimeout(() => {
-                        this.setState({
-                            squares: Array(9).fill(null),
-                            count: 0,
-                            win: true,
-                            winner: "DRAW"
-                        })
-                    }, 100);
+                    this.setState({
+                        squares: Array(9).fill(null),
+                        count: 0,
+                        win: true,
+                        winner: "DRAW"
+                    })
                 }
             }
         }
