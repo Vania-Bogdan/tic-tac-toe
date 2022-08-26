@@ -1,6 +1,8 @@
 import React from "react";
 import "./css/styles.css"
 
+// import ThemeChanger from "./ThemeChanger";
+
 class Game extends React.Component {
 
     state = {
@@ -93,15 +95,24 @@ class Game extends React.Component {
 
     render() {
         const win = this.state.win
+        const count = this.state.count
+        const activeSymbolX = (count % 2 === 0) ?
+            "current-symbol-active" : "current-symbol"
+        const activeSymbolO = (count % 2 !== 0) ?
+            "current-symbol-active" : "current-symbol"
         return (
-            <div>
+            <div
+                // style={{ display: 'flex' }}
+            >
+                {/* <ThemeChanger /> */}
                 {win === true ?
                     <div className="wrapper">
                         <h1 className="win">{this.state.winner}</h1>
                         <button type="button" className="win_btn" onClick={this.playAgain}>play again</button>
                     </div>
                     :
-                    <div className="field">
+                    <div className="playing-area">
+                        <div className="field">
                 <div className="item" onClick={this.clickHandler} data="0">{this.state.squares[0]}</div>
                 <div className="item" onClick={this.clickHandler} data="1">{this.state.squares[1]}</div>
                 <div className="item" onClick={this.clickHandler} data="2">{this.state.squares[2]}</div>
@@ -111,6 +122,11 @@ class Game extends React.Component {
                 <div className="item" onClick={this.clickHandler} data="6">{this.state.squares[6]}</div>
                 <div className="item" onClick={this.clickHandler} data="7">{this.state.squares[7]}</div>
                 <div className="item" onClick={this.clickHandler} data="8">{this.state.squares[8]}</div>
+                        </div>
+                        <div className="current-symbol-container">
+                            <div className={activeSymbolX}>X</div>
+                            <div className={activeSymbolO}>O</div>
+                        </div>
                     </div>
                 }
             </div>
