@@ -1,23 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./css/styles.css"
 
-class ThemeChanger extends React.Component{
+import ThemeContext from "context/ThemeContext";
 
-    state = {
-        color: ""
-    }
+export default function Switch () {
+    const { toggle } = useContext(ThemeContext);
 
-    render() {
-        return (
-            <div className="theme-wraper">
-                <div className="t-white"></div>
-                <div className="t-white"></div>
-                <div className="t-white"></div>
-                <div className="t-white"></div>
-
-            </div>
-        )
-    }
-}
-
-export default ThemeChanger
+    return (
+        <div className="theme-wraper">
+            <div className="t-white" data="white" 
+        onClick={(e) => toggle(e)}></div>
+            <div className="t-black" data="black" 
+        onClick={(e) => toggle(e)}></div>
+        </div>
+    );
+} 

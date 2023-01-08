@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/styles.css"
 
-// import ThemeChanger from "./ThemeChanger";
+import ThemeChanger from "./ThemeChanger";
 
 class Game extends React.Component {
 
@@ -101,12 +101,11 @@ class Game extends React.Component {
         const activeSymbolO = (count % 2 !== 0) ?
             "current-symbol-active" : "current-symbol"
         return (
-            <div
-                // style={{ display: 'flex' }}
+            <div style={{ display: 'flex' }}
             >
-                {/* <ThemeChanger /> */}
+                <ThemeChanger />
                 {win === true ?
-                    <div className="wrapper">
+                    <div className="playing-area">
                         <h1 className="win">{this.state.winner}</h1>
                         <button type="button" className="win_btn" onClick={this.playAgain}>play again</button>
                     </div>
