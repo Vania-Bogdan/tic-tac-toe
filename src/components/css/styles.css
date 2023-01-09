@@ -23,7 +23,6 @@ body{
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
     position: relative;
-    border-radius: 10px;
 }
 
 .item{
@@ -37,22 +36,6 @@ body{
     color: var(--lines-symbol-text-border);
     width: 160px;
     height: 160px;
-    border-radius: 10px;
-}
-
-@media (max-width:480px) {
-    .field{
-        width: 276px;
-        height: 276px;
-        grid-gap: 3px;
-        border-radius: 0;
-        margin-top: 150px;
-    }
-    .item{
-        width: 90px;
-        height: 90px;
-        border-radius: 0;
-    }
 }
 
 .win{
@@ -118,7 +101,6 @@ body{
     position: fixed;
     left: 30px;
     top: 30px;
-    /* height: 500px; */
     background: #fff;
     border: 4px solid black;
     border-radius: 30px;
@@ -176,4 +158,70 @@ body{
     border: 2px solid black;
     border-radius: 50%;
     margin: 10px;
+}
+
+/* ADAPTIV------------------------------------------------------- */
+
+@media screen and (max-width: 991px) {
+    /* стили для больших планшетов - начало */
+
+}
+
+@media screen and (max-width: 767px) {
+    /* стили для средних планшетов - начало */
+    .field {
+        width: 432px;
+        height: 432px;
+        grid-gap: 6px;
+        border-radius: 0;
+        margin-top: 150px;
+    }
+
+    .item {
+        width: 140px;
+        height: 140px;
+        border-radius: 0;
+    }
+    .theme-wraper {
+        top: 10px;
+        left: 20px;
+        right: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    /* стили для телефонов - начало */
+    .field {
+        width: 276px;
+        height: 276px;
+        grid-gap: 3px;
+        border-radius: 0;
+        margin-top: 80px;
+    }
+
+    .item {
+        width: 90px;
+        height: 90px;
+        border-radius: 0;
+    }
+
+    .theme-wraper {
+        top: 5px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .t-white, .t-black, .t-red, .t-green, .t-blue, .t-calm{
+        width: 35px;
+        height: 35px;
+        margin: 5px;
+    }
 }
